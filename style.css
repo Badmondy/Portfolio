@@ -3,7 +3,7 @@ body{
     margin:0;
     background-color:rgba(214, 66, 7, 0);
     background-image: url("mountains.jfif");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 .wrapped{
@@ -14,7 +14,7 @@ body{
 .professionsContainer{
     position: relative;
     text-align: center;
-    width: 10em;
+    width: 20%;
     height: 60%;
     background-color: rgba(0, 255, 255, 0.116);
     border-radius:10%;
@@ -63,18 +63,18 @@ h1{
 }
 .content{
     margin-top:5em;
-    width:60vw;
+    width:60%;
     height: 80vh;
     border-radius:2em;
     box-shadow:-2em 2em 2em rgba(0, 0, 0, 0.368);
     background: linear-gradient(to right top,rgba(146, 164, 146, 0.456),rgba(255, 0, 0, 0.456),rgba(0, 0, 255, 0.456))
 }
 .mainwindows{
-    position: fixed;
-    min-width: 45vw;
-    top: 21%;
-    right:21%;
-    margin-left:0;
+    position: relative;
+    max-width: 65%;
+    top: -62%;
+    left:25%;
+    margin-left:5%;
     height: 60vh;
     background-color: black;
     border-radius:1%;
@@ -82,11 +82,38 @@ h1{
     text-indent: 1em;
     color:rgb(250, 250, 250);
     
+    
+}
+.hidebtn{
+    position: absolute;
+    top:1%;
+    margin-left: 92%;
+    font-family: "Consolas";
+    background-color:rgb(170, 12, 12);
+}
+
+.hidebtn:hover{
+    background-color: rgb(66, 5, 5);;
 }
 @keyframes typing{
     from{width:0}
     to{width:100%}
     
+}
+.console{
+    position: relative;
+    top:80%;
+    color:white;
+    font-family: "Consolas";
+    font-size:80%;
+}
+#mysecretBtn{
+    position: absolute;
+    top:91%;
+    left:50%;
+    text-align:center;
+    width: 6.5em;
+    font-size: 0.5em;
 }
 
 .typewriter{
@@ -97,14 +124,44 @@ color: green;
 font-family: "Consolas";
 
 }
-
+#hideInput{
+    border:none;
+    background-color: black;
+    color:white;
+}
 .infowrite{
-    
+    position:absolute;
     overflow:hidden;
     white-space:nowrap;
-    font-size: 0.8em;
+    font-size: 80%;
     width:0;
     color:white;
     font-family: "Consolas";
-    animation: typing 8s forwards;}
+    word-wrap: break-word;
+    animation: typing 8s forwards;
+}
 
+    @media screen and (max-width: 1500px) {
+        .content{
+          width: 90%;
+          height:30em;
+        }
+        .mainwindows{
+           height:20em;
+           font-size:50%;
+        }
+        .professionsContainer{
+            font-size:0.5em;
+            text-align: center;
+
+        }
+        .list1{
+            margin-left:-50%;
+        }
+        .emailbtn{
+            width:60%;
+            height:9.5%;
+            font-size:x-small;
+        }
+      }
+   

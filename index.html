@@ -14,9 +14,9 @@
  
 <div class="wrapped">
 
-    <div class="content">
-        <h1> Välkommen </h1>
-        <div class="professionsContainer">
+    <div class="content" id="content">
+        <h1 id="hej"> Välkommen </h1>
+        <div class="professionsContainer" id="proffs">
             <img src="profil_oskar.jpeg" alt="" class="profilepic">
             <ol class="list1">
                 <lh><u>Kunskaper</u></lh>
@@ -30,13 +30,16 @@
             <button class="emailbtn" id="email" onclick="sendEmail()"> Email me</button>
            
         </div>
-
         
         
-          <div class="mainwindows"><p class="typewriter"> Välkommen </p>
+          <div class="mainwindows" id="hideterminal"><p class="typewriter"> Välkommen</p>
         
-        <p class="infowrite" >Läser till webbutvecklare .NET tagit examen inom Geografiska information system</p></div> 
-         
+        <p class="infowrite" id="infowrite">Läser till webbutvecklare .NET tagit examen inom Geografiska information system </p>
+        <p class="console">C:\Users\user> <input id="getInput"> </input></p>
+        <button class="hidebtn" id="email" onclick="HideData()"> X </button>
+        <button id="mysecretBtn" onclick="commando()"> Send commando</button>
+    </div> 
+    
     
         
     </div>  
