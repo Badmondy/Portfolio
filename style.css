@@ -6,6 +6,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
 .wrapped{
     display:flex;
     justify-content: center;
@@ -33,7 +35,7 @@ body{
 .pinfo{
     position: relative;
     font-family: "AudioWide";
-    font-size:80%;
+    font-size:1.5em;
     top:5%;
     letter-spacing: 0.1em;
     color:rgb(224, 219, 219);
@@ -42,6 +44,7 @@ body{
     position: relative;
     font-family: "AudioWide";
     top:10%;
+    font-size:1.5em;
     border-radius:20%;
     background-color:coral;
     border-color: rgba(255, 255, 255, 0);
@@ -83,7 +86,7 @@ h1{
     color:white;
     
     font-family: "Consolas";
-    font-size:80%;
+    font-size:1.5em;
 }
 .getInput{
     background-color:rgb(4, 4, 4);
@@ -93,8 +96,8 @@ h1{
 }
 .hidebtn{
     position:relative;
-    left:93%;
-    top:-10%;
+    left:95%;
+    top:-5%;
     border-radius:30%;
     border-color:none;
     font-family: "Consolas";
@@ -118,7 +121,7 @@ h1{
 
 .typewriter{
 
-font-size: 1em;
+font-size: 1.5em;
 
 color: green;
 font-family: "Consolas";
@@ -129,7 +132,7 @@ font-family: "Consolas";
     position:relative;
     overflow:hidden;
     white-space:nowrap;
-    font-size: 0.9em;
+    font-size: 1.5em;
     width:0;
     color:white;
     font-family: "Consolas";
@@ -138,12 +141,17 @@ font-family: "Consolas";
 @media screen and (max-width: 900px) {
     .content {
       width:90vw;
+      height:90vh;
       font-size:0.9em;
       word-wrap:break-word;
  
     }
     .getInput{
         width:40%;
+    }
+    .hidebtn{
+        margin-left:-9%;
+        
     }
     .mysecretBtn{
         width:5%;
@@ -155,10 +163,11 @@ font-family: "Consolas";
     body{
         background-size: cover;
         background-repeat: repeat;
+        font-size:50%;
     }
     .infowrite{
        font-size:50%;
-       word-wrap:break-word;
+       
 
     }
     .mainwindows{
