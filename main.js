@@ -1,4 +1,4 @@
-var text = "Hej jag heter Oskar Markbäck Zeilon,<br>&nbsp&nbspbor precis utanför Hässleholm med sambo och hund.";
+var text = "Hej jag heter Oskar Markbäck Zeilon,<br>bor precis utanför Hässleholm med sambo och hund.";
 var text2 = "Här kommer blivande projekt dyka upp";
 var empty  = "";
 
@@ -9,7 +9,6 @@ function commando() {
        changed.innerHTML = "Du kan använda: projekt, info, clear.";
     }if(fetched == "info"){
         changed.innerHTML = text;  
-
     }
     if(fetched == "projekt"){
         changed.innerHTML = text2;
