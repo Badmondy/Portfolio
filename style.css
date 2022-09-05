@@ -95,9 +95,10 @@ h1{
     font-size:1em;
 }
 .hidebtn{
-    position:relative;
-    left:95%;
-    top:-5%;
+    position:sticky;
+    left:75vw;
+    top:0;
+    margin:0;
     border-radius:30%;
     border-color:none;
     font-family: "Consolas";
@@ -138,21 +139,18 @@ font-family: "Consolas";
     font-family: "Consolas";
     animation: typing 8s forwards;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1700px) {
     .content {
       width:90vw;
       height:90vh;
-      font-size:0.9em;
+      font-size:2em;
       word-wrap:break-word;
  
     }
     .getInput{
         width:40%;
     }
-    .hidebtn{
-        margin-left:-9%;
-        
-    }
+ 
     .mysecretBtn{
         width:5%;
         font-size:0.5em;
@@ -166,13 +164,60 @@ font-family: "Consolas";
         font-size:50%;
     }
     .infowrite{
-       font-size:50%;
+       font-size:1em;
        
 
+    }
+    .hidebtn{
+        left:88vw;
     }
     .mainwindows{
         word-wrap:break-word;
     }
  
  
+}
+@media screen and (max-width: 600px) {
+    .content {
+      width:90vw;
+      height:90vh;
+      font-size:1em;
+      word-wrap:break-word;
+ 
+    }
+    .getInput{
+        width:40%;
+    }
+ 
+    .mysecretBtn{
+        width:5%;
+        font-size:0.5em;
+        border-radius:50%;
+        border-color:black;
+        text-indent:-999999999px;
+    }
+    body{
+        background-size: cover;
+        background-repeat: repeat;
+        font-size:50%;
+    }
+    .infowrite{
+       font-size:1em;
+       
+
+    }
+    .hidebtn{
+        left:88vw;
+    }
+    .mainwindows{
+        word-wrap:break-word;
+    }
+ 
+ 
+}
+
+@media screen and (max-width: 400px) {
+.profilepic{
+    width: 50%;
+}
 }
