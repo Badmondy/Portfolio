@@ -1,0 +1,110 @@
+
+body{
+    margin:0;
+    background-color:rgba(214, 66, 7, 0);
+    background-image: url("mountains.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapped{
+    display:flex;
+    justify-content: center;
+    
+}
+.professionsContainer{
+    position: relative;
+    text-align: center;
+    width: 10em;
+    height: 60%;
+    background-color: rgba(0, 255, 255, 0.116);
+    border-radius:10%;
+    margin-left:2em;
+    box-shadow: -1em 1em 3em rgba(0, 0, 0, 0.285);
+}
+.list1{
+    position: relative;
+    top:2em;
+    text-align: center;
+    margin-left:-2em;
+    font-family: "AudioWide";
+    letter-spacing: 0.1em;
+    list-style:none;
+    color:rgb(224, 219, 219);
+}
+.profilepic{
+    position:relative;
+    border-radius: 50%;
+    margin-top:5%;
+    height:20%;
+}
+.phone{
+    position: relative;
+    top:4em;
+    font-family: "AudioWide";
+    letter-spacing: 0.1em;
+    color:rgb(224, 219, 219);
+}
+.emailbtn{
+    position: relative;
+    top:4.5em;
+    font-family: "AudioWide";
+    border-radius:15em;
+    background-color:coral;
+    border-color: rgba(255, 255, 255, 0);
+}
+.emailbtn:hover{
+    background-color: rgb(226, 86, 35);
+}
+
+h1{
+    font-family:"AudioWide";
+    text-align:center;
+    color:rgb(255, 255, 255)
+}
+.content{
+    margin-top:5em;
+    width:60vw;
+    height: 80vh;
+    border-radius:2em;
+    box-shadow:-2em 2em 2em rgba(0, 0, 0, 0.368);
+    background: linear-gradient(to right top,rgba(146, 164, 146, 0.456),rgba(255, 0, 0, 0.456),rgba(0, 0, 255, 0.456))
+}
+.mainwindows{
+    position: fixed;
+    min-width: 45vw;
+    top: 21%;
+    right:21%;
+    margin-left:0;
+    height: 60vh;
+    background-color: black;
+    border-radius:1%;
+    line-height:2em;
+    text-indent: 1em;
+    color:rgb(250, 250, 250);
+    
+}
+@keyframes typing{
+    from{width:0}
+    to{width:100%}
+    
+}
+
+.typewriter{
+
+font-size: 1em;
+
+color: green;
+font-family: "Consolas";
+
+}
+
+.infowrite{
+    
+    overflow:hidden;
+    white-space:nowrap;
+    font-size: 0.8em;
+    width:0;
+    color:white;
+    font-family: "Consolas";
+    animation: typing 8s forwards;}
+
