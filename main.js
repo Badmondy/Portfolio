@@ -1,28 +1,36 @@
-var text = "Hej jag heter Oskar Markbäck Zeilon,<br>bor precis utanför Hässleholm med sambo och hund.";
-var text2 = "Här kommer blivande projekt dyka upp";
+var text = "Hej jag heter Oskar Markbäck Zeilon,<br>&nbsp&nbspbor precis utanför Hässleholm med sambo och hund.";
+var text2 = "Här kommer blivande projekt dyka upp:";
 var empty  = "";
-var help = "Du kan använda dessa kommandon:<br>projekt,info,clear,restart,?help"
-
+var help = "Du kan använda dessa kommandon:<br>[project],[about],[clear],[restart],[?help],[wheater]"
+var apiKey = "6b6d7c6a50824c9193e02456220609";
 function commando() {
    var fetched = document.getElementById("getInput").value;
    var changed = document.getElementById("infowrite");
+   var wheatervue = document.getElementById("changeWheater");
+   var sun = document.getElementById("sunny");
+   var cold = document.getElementById("cold");
     if(fetched == "?help"){
        changed.innerHTML = help;
-    }if(fetched == "info"){
+    }else if(fetched == "about"){
         changed.innerHTML = text;  
     }
-    if(fetched == "projekt"){
+    else if(fetched == "project"){
         changed.innerHTML = text2;
     }
-    if(fetched == "clear"){
+    else if(fetched == "clear"){
         changed.innerHTML = empty;
+        sun.style.display = "none";
+        cold.style.display = "none";
     }
-    if(fetched == "restart"){
+    else if(fetched == "restart"){
         history.go(0);
+    }else if(fetched == "wheater"){
+        wheatervue.style.display = "flex";
+    }else{
+
     }
-    if(fetched == "wheater"){
-        window.location = "https://badmondy.github.io/Portfolio/chatbot.html";
-    }
+       
+    
 }
 
 
@@ -43,4 +51,3 @@ function HideData() {
     i.style.display = "flex";
     
 }
-
