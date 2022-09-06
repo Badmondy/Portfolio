@@ -20,6 +20,9 @@ function commando() {
     if(fetched == "restart"){
         history.go(0);
     }
+    if(fetched == "wheater"){
+        window.location = "https://badmondy.github.io/Portfolio/chatbot.html";
+    }
 }
 
 

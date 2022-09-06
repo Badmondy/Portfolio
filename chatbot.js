@@ -8,7 +8,7 @@ let url = "http://api.weatherapi.com/v1/current.json?key=6b6d7c6a50824c9193e0245
 
 function GetWheater(){
     var city = document.getElementById("city").value;
-fetch(`http://api.weatherapi.com/v1/current.json?key=6b6d7c6a50824c9193e02456220609&q=`+city+`&aqi=no`, {
+fetch(`https://api.weatherapi.com/v1/current.json?key=6b6d7c6a50824c9193e02456220609&q=`+city+`&aqi=no`, {
         method: 'get'
     })
     .then(res => {
