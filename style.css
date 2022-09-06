@@ -65,8 +65,8 @@ body{
 }
 .info{
     position: relative;
-    left:20%;
-    font-size:1.7em;
+    left:15%;
+    font-size:1.5em;
     top:-20%;
     color:rgb(254, 254, 254);
     font-family: 'Consolas';
@@ -195,7 +195,7 @@ body{
     .info{
         margin-bottom:20%;
         font-size:1.5em;
-        margin-right:25%;
+        margin-right:30%;
     }
     .console{
         font-size:1em;
@@ -218,9 +218,18 @@ body{
         width:45%;
      
     }
-    body{background-repeat: repeat-y;}
+    body{
+        background-repeat: repeat-y;
+    }
     .wheaterAPIDIV{
+        left:35%;
+        top:100%;
+        align-items: center;
+    }
+    .picturesSun{
         left:10%;
-        top:70%;
+    }
+    .picturesCold{
+        left:10%;
     }
 }

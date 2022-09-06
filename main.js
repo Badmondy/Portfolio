@@ -12,10 +12,12 @@ function commando() {
     if(fetched == "?help"){
        changed.innerHTML = help;
     }else if(fetched == "about"){
-        changed.innerHTML = text;  
+        changed.innerHTML = text; 
+        wheatervue.style.display = "none"; 
     }
     else if(fetched == "project"){
         changed.innerHTML = text2;
+        wheatervue.style.display = "none";
     }
     else if(fetched == "clear"){
         changed.innerHTML = empty;
@@ -25,8 +27,10 @@ function commando() {
     }
     else if(fetched == "restart"){
         history.go(0);
+        
     }else if(fetched == "wheater"){
         wheatervue.style.display = "flex";
+        
     }else{
 
     }
