@@ -1,313 +1,213 @@
-
 body{
-    margin:0;
-    background-color:rgba(214, 66, 7, 0);
     background-image: url("mountains.jfif");
+    background-size:cover;
+    height:100%;
     background-repeat: no-repeat;
-    background-size: cover;
 }
-
-
-.wrapped{
+.wrapped  /*Hela sidan*/
+{
+    box-sizing:border-box;
     display:flex;
-    justify-content: center;
+    justify-content:space-around;
+    justify-items: center;
+    text-align:center;
     
     
+
 }
-.professionsContainer{
-    text-align: center;
-    width: 20%;
-    height: 60%;
-    background-color: rgba(0, 255, 255, 0.116);
-    border-radius:10%;
-    margin-left:3%;
-    align-items: center;
-    box-shadow: -1em 1em 3em rgba(0, 0, 0, 0.285);
+#welcometext{
+    position: relative;
+    line-height:1em;
+    font-family:'Consolas';
+    font-size:200%;
+    color:white;
+}
+.picturesSun{
+    display:none;
+    position: absolute;
+    width: 40%;
+    left:40%;
+    height:40%;
+    top:10%;
+}
+.picturesCold{
+    display:none;
+    position: absolute;
+    width: 50%;
+    left:40%;
+    height:50%;
+    top:10%;
 }
 
-.profilepic{
-    position:relative;
-    border-radius: 50%;
+.content{  
+     /*Stora glaset */
+    margin-top:3%;
+    background-image:linear-gradient(to right top,rgba(117, 141, 141, 0.807),rgba(229, 140, 24, 0.538),rgba(255, 15, 15, 0.812));
+    width:85vw;
+    min-width:85vw;
+    height:75vh;
+    min-height:75vh;
+    height:50em;
+    flex-wrap:wrap;
+    border-radius:3em;
+    box-shadow: -20px 15px 25px 10px rgba(16, 50, 16, 0.333);   /*Right/LEFT - UPP/NER - blur - shadow   */
+}
+.wheaterAPIDIV{
+    display:none;
+    position: absolute;
+    flex-direction: column;
+    top:85%;
+    left:70%;
+    width:25%;
+    font-size:2em;
     height:20%;
-    top:5%;
+}
+.getInput{
+    text-transform: capitalize;
+}
+.info{
+    position: relative;
+    text-align:left;
+    text-indent:1em;
+    font-size:2em;
+    color:rgb(253, 253, 253);
+    font-family: 'Consolas';
 }
 
+.terminal{
+    display:inline-flex;
+    position: relative;
+    background-color:black;
+    height:75%;
+    left:10%;
+    min-width:20%;
+    width:70%;
+    border-radius:3em;
+    border:solid 0.1em rgba(255, 255, 255, 0.416);
+    flex-shrink: 6;
+
+}
+.console{
+    position: absolute;
+    top:90%;
+    color:white;
+    text-indent: 1em;
+    word-wrap:break-word;
+    font-family: "Consolas";
+    font-size:1em;
+}
+
+.professions{       /* Lilla glaset */    display:k ;
+    display:flex;
+    position: absolute;
+    left:-25%;
+    top:0%;
+    justify-content: center;
+    flex-direction: column;
+    background-image:linear-gradient(to right top,rgba(65, 76, 80, 0.175),rgba(44, 72, 83, 0.337),rgba(245, 140, 28, 0.558));
+    width:20em;
+    border:solid 1.5px rgba(248, 248, 248, 0.814);
+    min-width:15em;
+    height:40em;
+    border-radius:3em;
+  
+}
+.cameraframe{
+    position: absolute;
+    width: 1em;
+   
+    height:1em;
+    align-self: center;
+    top:0.5%;
+    border-radius:50%;
+    background-color: grey;
+    border:solid white 0.5px;
+}
+.lens{
+    position: relative;
+    width: 0.5em;
+    height:0.5em;
+    left:25%;
+    top:25%;
+    border-radius:50%;
+    background-color: rgba(103, 242, 235, 0.629);
+}
+.mobileframe{
+    position: absolute;
+    width: 90%;
+    top:5%;
+    min-width:50%;
+    min-height:80%;
+    border-radius:3em;
+    border: solid 0.1em rgba(255, 255, 255, 0.668);
+    height: 85%;
+    background-color: rgba(255, 0, 0, 0);
+    align-self: center;
+    box-shadow:inset 0px 0px 5px 1px rgb(255, 255, 255);
+    
+}
+
+.pictureplaceholder{ /* Grund för profilbild */ 
+    position: relative;
+    width:30%;
+    bottom:10%;
+    min-width:30%;
+    left:35%;
+    height:10%;
+}
+.profil{ /*Profilbild*/
+    position: relative;
+    width:100%;
+    min-width:100%;
+    border-radius:50%;
+}
 .pinfo{
     position: relative;
-    font-family: "AudioWide";
-    font-size:1.5em;
-    top:5%;
-    letter-spacing: 0.1em;
-    color:rgb(224, 219, 219);
+    text-align:center;
+    font-family:"Consolas";
+    font-size:200%;
+    color:white;
+    line-height:0em;  
 }
 .emailbtn{
     position: relative;
+    top:15%;
     font-family: "AudioWide";
-    top:6%;
-    font-size:1.5em;
-    border-radius:20%;
+    font-size:1em;
+    width:40%;
+    padding:0.3em;
+    min-width:40%;
+    align-self: center;
+    border-radius:3em;
     background-color:coral;
     border-color: rgba(255, 255, 255, 0);
 }
 .emailbtn:hover{
     background-color: rgb(226, 86, 35);
 }
+@media only screen and (min-width: 320px) and (max-width: 1800px) {
+    .professions {
+        display:none;
 
-h1{
-    font-family:"AudioWide";
-    text-align:center;
-    color:rgb(255, 255, 255)
-}
-.content{
-    margin-top:5%;
-    width:60%;
-    height: 80vh;
-    border-radius:2%;
-    box-shadow:-2em 2em 2em rgba(0, 0, 0, 0.368);
-    background: linear-gradient(to right top,rgba(146, 164, 146, 0.456),rgba(255, 0, 0, 0.456),rgba(0, 0, 255, 0.456))
-}
-.mainwindows{
-    position: relative;
-    width: 70%;
-    height: 80%;
-    padding:0;
-    left:25%;
-    bottom:62%;
-    background-color: black;
-    border-radius:1%;
-    line-height:2em;
-    color:rgb(250, 250, 250);
-    
-    
-}
-.console{
-    position: absolute;
-    top:90%;
-    color:white;
-    
-    font-family: "Consolas";
-    font-size:1.5em;
-}
-.getInput{
-    background-color:rgb(4, 4, 4);
-    border:none;
-    color:white;
-    font-size:1em;
-}
-.hidebtn{
-    position:sticky;
-    left:75vw;
-    top:0;
-    margin:0;
-    border-radius:30%;
-    border-color:none;
-    font-family: "Consolas";
-    background-color:rgba(212, 7, 7, 0.733);
-}
-
-.hidebtn:hover{
-    background-color: rgb(66, 5, 5);;
-}
-@keyframes typing{
-    from{width:0}
-    to{width:100%}
-    
-}
-
-#mysecretBtn{
-    position:relative;
-    
-    font-size: 1em;
-}
-
-.typewriter{
-
-font-size: 1.5em;
-
-color: green;
-font-family: "Consolas";
-
-}
-
-.infowrite{
-    position:relative;
-    overflow:hidden;
-    white-space:nowrap;
-    font-size: 1.5em;
-    width:0;
-    color:white;
-    font-family: "Consolas";
-    animation: typing 8s forwards;
-}
-@media screen and (max-width: 1700px) {
-    .content {
-      width:90vw;
-      height:90vh;
-      font-size:2em;
-      word-wrap:break-word;
- 
+    }
+    .console{
+        font-size:1em;
+        text-indent: 0;
+    }
+    .terminal{
+        display:flex;
+        margin-left:0%;
+        width:80%;
+        font-size:0.8em;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        text-align:center;
+    }
+    .mysecretBtn{
+        font-size:1em;
     }
     .getInput{
-        width:40%;
+        width:20%;
     }
- 
-    .mysecretBtn{
-        width:5%;
-        font-size:0.5em;
-        border-radius:50%;
-        border-color:black;
-        text-indent:-999999999px;
-    }
-    body{
-        background-size: cover;
-        background-repeat: repeat;
-        font-size:50%;
-    }
-    .infowrite{
-       font-size:1em;
-       
-
-    }
-    .hidebtn{
-        left:88vw;
-    }
-    .mainwindows{
-        word-wrap:break-word;
-    }
- 
- 
-}
-@media screen and (max-width: 600px) {
-    .content {
-      width:90vw;
-      height:90vh;
-      font-size:1em;
-      word-wrap:break-word;
- 
-    }
-    .getInput{
-        width:40%;
-    }
- 
-    .mysecretBtn{
-        width:5%;
-        font-size:0.5em;
-        border-radius:50%;
-        border-color:black;
-        text-indent:-999999999px;
-    }
-    body{
-        background-size: cover;
-        background-repeat: repeat;
-        font-size:50%;
-    }
-    .infowrite{
-       font-size:1em;
-       
-
-    }
-    .hidebtn{
-        left:88vw;
-    }
-    .mainwindows{
-        word-wrap:break-word;
-    }
- 
- 
-}
-
-@media screen and (max-width: 400px) {
-.profilepic{
-    width: 50%;
-}
-}
-.minion:hover{
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
-}
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-.messagebox{
-    position: relative;
-    left:10%;
-    text-align: center;
-    border-radius:2%;
-
-    padding-top:1%;
-    padding-bottom:1%;
-    font-size: 1.5em;
-    width:30%;
-    color:white;
-    font-style:"Consolas";
-    box-shadow: 0em 0em 1em 1em rgba(211, 206, 206, 0.521);
-    background-image:linear-gradient(to right top, rgba(173, 216, 230, 0.185),rgba(0, 0, 255, 0.311),rgba(255, 0, 0, 0.218));
-
-}
-
-.questions{
-    position: relative;
-    
-    width:80%;
-    left:10%;
-    text-align:center;
-    top:50%;
-
-}
-.cWindows{
-position: relative;
-background-color: rgba(34, 24, 11, 0.422);
-bottom:40%;
-left:50%;
-width:45%;
-height:50%;
-border-radius:2em;
-color:white;
-font-family:'Times New Roman', Times, serif;
-}
-.performTask{
-    position: relative;
-    top:75%;
-    left:5%;
-    font-size:1.5em;
-    border-radius:1em;
-    border:none;
-    background-color: rgba(244, 236, 236, 0.636);
-}
-#city{
-    position: relative;
-    top:75%;
-    left:5%;
-    font-size:1.5em;
-    border-radius:2em;
-    border:none;
-    text-indent: 0.5em;
-    text-transform: capitalize;
-}
-#temp{
-    position: relative;
-    top:10%;
-    left:5%;
-    font-size:1.5em;
-}
-.performTask:hover{
-    background-color: rgba(31, 230, 21, 0.848);
-}
-.wheaterpic{
-    display:none;
-    position: absolute;
-    width:20%;
-    left:70%;
-    top:20%;
-
-}
-.wheaterpicice{
-    display:none;
-    position: absolute;
-    width:20%;
-    left:70%;
-    top:15%;
-    color:yellow;
-
+    body{background-repeat: repeat-y;}
 }
