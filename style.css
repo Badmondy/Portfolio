@@ -100,7 +100,7 @@ body{
 .professions{       /* Lilla glaset */    display:k ;
     display:flex;
     position: absolute;
-    left:-25%;
+    left:-35%;
     top:0%;
     justify-content: center;
     flex-direction: column;
