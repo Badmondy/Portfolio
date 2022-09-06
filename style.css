@@ -98,7 +98,10 @@ body{
 .professions{       /* Lilla glaset */    display:k ;
     display:flex;
     position: absolute;
+
     left:-45%;
+
+
     top:0%;
     justify-content: center;
     flex-direction: column;
@@ -219,6 +222,7 @@ body{
      
     }
     body{background-repeat: repeat-y;}
+
     .wheaterAPIDIV{
         left:10%;
         top:70%;
