@@ -20,7 +20,10 @@ fetch(`https://api.weatherapi.com/v1/current.json?key=6b6d7c6a50824c9193e0245622
         var picW = document.getElementById("warm");
         var picC = document.getElementById("cold");
         var window = document.getElementById("cWindows");
-        if(response.current.temp_c < 8){
+        if(response.error.code == 1006){
+            temp.innerHTML = "Den staden finns inte";
+        }
+        else if(response.current.temp_c < 8){
             temp.innerHTML = ("Det är kallt i "+city+ " temp: " + response.current.temp_c + " celius.");
             picC.style.display = "flex";
             picW.style.display = "none";
@@ -32,5 +35,6 @@ fetch(`https://api.weatherapi.com/v1/current.json?key=6b6d7c6a50824c9193e0245622
             picC.style.display = "none";
             window.style.backgroundColor = "rgba(223, 129, 6, 0.63)";
         }
+        
     })
 }
