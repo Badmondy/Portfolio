@@ -21,6 +21,7 @@ function commando() {
         changed.innerHTML = empty;
         sun.style.display = "none";
         cold.style.display = "none";
+        wheatervue.style.display = "none";
     }
     else if(fetched == "restart"){
         history.go(0);
