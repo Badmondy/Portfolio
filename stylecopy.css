@@ -4,107 +4,109 @@ body{
     height:100%;
     background-repeat: no-repeat;
 }
-p{
-    margin:0;
-}
 .wrapped  /*Hela sidan*/
 {
+    box-sizing:border-box;
     display:flex;
-    justify-content:flex-end;
+    justify-content:center;
     text-align:center;
-    height:100vh;
-    width:100%;
 
 }
-
 #welcometext{
+    position: relative;
     line-height:1em;
     font-family:'Consolas';
     font-size:200%;
     color:white;
 }
-.picturesSun,.picturesCold{
+.picturesSun{
     display:none;
-    
+    position: absolute;
+    margin-top:20%;
+    width: 40%;
+    left:35%;
+    height:40%;
+    top:10%;
 }
-.gobackBtn{
-    display:flex;
-    position:absolute;
-    left:15%;
-    top:20%;
-    align-items:center;
-    border:solid 0px;
-    background-color:rgba(255, 255, 255, 0);
-    width: 2.5rem;
-    height:2.5rem;
-}
-.gobackBtn:hover{
-    background-color:rgba(13, 221, 228, 0.333);
-    border-radius:3em;
+.picturesCold{
+    display:none;
+    position: absolute;
+    margin-top:20%;
+    width: 40%;
+    left:35%;
+    height:40%;
+    top:10%;
 }
 
-.picturesCold > img, .picturesSun > img{
-    width:50%;
-    margin-top:10%;
-}
-.wheaterwindow{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    width:100%;
-    height:100%;
-}
-.wheaterbtn{
-    width:40%;
-    height:100%;
-}
- .wheaterAPI{
-    display:flex;
-    width:100%;
-    height:100%;
-    justify-content: center;
-    align-items: flex-end;
-}
-#wheatertext{
-    color:black;
-}
-.content{
-    display:flex;
-    flex-direction: column;
-    align-items:center;
+.content{  
+     /*Stora glaset */
+    position: relative;
+    margin-top:1.5%;
     background-image:linear-gradient(to right top,rgba(117, 141, 141, 0.807),rgba(229, 140, 24, 0.538),rgba(255, 15, 15, 0.812));
-    min-width:80%;
-    width:80%;
-    margin-top:5%;
-    height:80%;
+    width:85vw;
+    min-width:85vw;
+    height:50em;
+    min-height:65vh;
     border-radius:3em;
-    box-shadow: -20px 15px 25px 10px rgba(16, 50, 16, 0.333);
+    box-shadow: -20px 15px 25px 10px rgba(16, 50, 16, 0.333);   /*Right/LEFT - UPP/NER - blur - shadow   */
+}
+.wheaterAPIDIV{
+    display:none;
+    position: absolute;
+    flex-direction: column;
+    top:80%;
+    left:70%;
+    width:25%;
+    font-size:2em;
+    height:20%;
+}
+.getInput{
+    text-transform: capitalize;
+}
+.info{
+    position: relative;
+    left:15%;
+    font-size:1.5em;
+    top:-20%;
+    color:rgb(254, 254, 254);
+    font-family: 'Consolas';
+    align-self:center;
 }
 
 .terminal{
-    display:flex;
-    flex-direction: column;
+    display:inline-flex;
+    position: relative;
     background-color:black;
-    width:80%;
-    height:70%;
-    padding-bottom:2%;
-    color:white;
-    text-align:left;
-    border:solid rgb(157, 134, 134) 2px;
+    height:75%;
+    left:15%;
+    min-width:20%;
+    width:65%;
+    border-radius:3em;
+    border:solid 0.1em rgba(255, 255, 255, 0.416);
+    flex-shrink: 6;
+
 }
+.console{
+    position: absolute;
+    top:90%;
+    color:white;
+    text-indent: 1em;
+    word-wrap:break-word;
+    font-size:1em;
+}
+
 .professions{       /* Lilla glaset */ 
     display:flex;
     position: absolute;
-    top:15%;
+    left:-45%;
+    top:0%;
     justify-content: center;
     flex-direction: column;
     background-image:linear-gradient(to right top,rgba(65, 76, 80, 0.175),rgba(44, 72, 83, 0.337),rgba(245, 140, 28, 0.558));
-    width:10em;
+    width:20em;
     border:solid 1.5px rgba(248, 248, 248, 0.814);
     min-width:15em;
-    height:30em;
+    height:40em;
     border-radius:3em;
   
 }
@@ -161,9 +163,9 @@ p{
     position: relative;
     text-align:center;
     font-family:"Consolas";
-    font-size:100%;
+    font-size:200%;
     color:white;
-    line-height:1em;  
+    line-height:0em;  
 }
 .emailbtn{
     position: relative;
@@ -181,54 +183,53 @@ p{
 .emailbtn:hover{
     background-color: rgb(226, 86, 35);
 }
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+    .professions {
+        display:none;
 
-.mysecretBtn{
-   font-size:.3rem;
-   margin-left:1%;
-}
-
-.mysecretBtn:hover{
-    background-color:rgb(9, 255, 0);
-}
-.wheaterbtn:hover{
-    background-color:rgb(9, 255, 0);
-}
-
-.inputconsole{
-    display:flex;
-    position: relative;
-    top:-5%;
-    left: -27%;
-    color:white;
-    flex-direction: row;
-}
-
-
-
-
-
-@media screen and ( max-width: 1300px){   
-        .getInput{
-            width:50%;
-        }
-       
-        #datatext{
-            display:none;
-        }
-        .inputconsole{
-            position: relative;
-            justify-content: center;
-            top:0%;
-            left:0%;
-
-        }
-        
-        .professions{
-            display:none;
-        }
-        .wrapped{
-            justify-content:center;
-        }
-
-}
+    }
+    .content{
+        height:90vh;
     
+    }
+    .info{
+        margin-bottom:20%;
+        font-size:1.5em;
+        margin-right:30%;
+    }
+    .console{
+        font-size:1em;
+        text-indent: 0;
+    }
+    .terminal{
+        display:flex;
+        margin-left:-5%;
+        width:80%;
+        height:70%;
+        font-size:0.5em;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+        text-align:center;
+    }
+    .mysecretBtn{
+        font-size:1em;
+    }
+    .getInput{
+        width:45%;
+     
+    }
+    body{
+        background-repeat: repeat-y;
+    }
+    .wheaterAPIDIV{
+        left:35%;
+        top:100%;
+        align-items: center;
+    }
+    .picturesSun{
+        left:10%;
+    }
+    .picturesCold{
+        left:10%;
+    }
+}

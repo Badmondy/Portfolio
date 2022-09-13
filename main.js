@@ -1,4 +1,4 @@
-var text = "Hej jag heter Oskar Markbäck Zeilon,<br>&nbsp&nbspbor precis utanför Hässleholm med sambo och hund.";
+var text = "Hej jag heter Oskar Markbäck Zeilon, bor precis utanför Hässleholm med sambo och hund.";
 var text2 = "Här kommer blivande projekt dyka upp:";
 var empty  = "";
 var help = "Du kan använda dessa kommandon:<br>[project],[about],[clear],[restart],[?help],[wheater]"
@@ -29,7 +29,7 @@ function commando() {
         history.go(0);
         
     }else if(fetched == "wheater"){
-        wheatervue.style.display = "flex";
+        window.location.href = "chatbot.html";
         
     }else{
 
@@ -55,4 +55,9 @@ function HideData() {
     o.innerHTML = "BankApp Made in C#";
     i.style.display = "flex";
     
+}
+
+function gobackBtn(){
+    window.location.href = "index.html";
+        
 }
